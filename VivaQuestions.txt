@@ -1,0 +1,13 @@
+1.  What is sparrs and dens array 
+2.  Expalin the use of following methods in numpy library
+i. count
+ii. extande
+iii. index
+iv. pop
+v. remove
+3.  What are the operations that can perform once array
+4.  Write stack overflow conduction 
+5.  Write the stack involved in insertion and deletatons elements in the stack
+6.  Why and When should be use stack or queue data structure insted of array or list
+7.  What are the types of queues
+8.  How implement stack using queue 

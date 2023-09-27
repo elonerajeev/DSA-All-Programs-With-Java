@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.javatpoint.com/data-structure-array -->
+<html lang="en" class="chromane-sonic-dark"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<script type="text/javascript" async="" src="./Array (Data Structures) - javatpoint_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Array (Data Structures) - javatpoint_files/ga.js.download"></script><script type="text/javascript" async="" src="./Array (Data Structures) - javatpoint_files/f.txt"></script><script type="text/javascript" async="" src="./Array (Data Structures) - javatpoint_files/f.txt"></script><script async="" src="./Array (Data Structures) - javatpoint_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-24880427-1');
+</script>
+<title>Array (Data Structures) - javatpoint</title><link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png">
+<link rel="stylesheet" type="text/css" href="./Array (Data Structures) - javatpoint_files/link.css" async=""><link rel="dns-prefetch" href="https://clients1.google.com/"><link rel="dns-prefetch" href="https://static.javatpoint.com/"><link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/"><link rel="dns-prefetch" href="https://www.google.com/"><link rel="dns-prefetch" href="https://feedify.net/"><meta name="theme-color" content="#4CAF50"><meta property="og:title" content="Array (Data Structures) - javatpoint"><meta property="og:description" content="DS Array with Introduction, Asymptotic Analysis, Array, Pointer, Structure, Singly Linked List, Doubly Linked List, Circular Linked List, Binary Search, Linear Search, Sorting, Bucket Sort, Comb Sort, Shell Sort, Heap Sort, Merge Sort, Selection Sort, Counting Sort, Stack, Qene, Circular Quene, Graph, Tree, B Tree, B+ Tree, Avl Tree etc.">
+<meta name="keywords" content="data structure array, introduction, asymptotic analysis, array, pointer, structure, singly linked list, doubly linked list, circular linked list, binary search, linear search, sorting, bucket sort, comb sort, shell sort, heap sort, merge sort, selection sort, counting sort, stack, quene, circular quene, graph, tree, b tree, b+ tree, avl tree"><meta name="description" content="DS Array with Introduction, Asymptotic Analysis, Array, Pointer, Structure, Singly Linked List, Doubly Linked List, Circular Linked List, Binary Search, Linear Search, Sorting, Bucket Sort, Comb Sort, Shell Sort, Heap Sort, Merge Sort, Selection Sort, Counting Sort, Stack, Qene, Circular Quene, Graph, Tree, B Tree, B+ Tree, Avl Tree etc."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="canonical" href="https://www.javatpoint.com/data-structure-array">
+<meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta name="twitter:title" property="og:title" content="Array (Data Structures) - javatpoint"><meta name="twitter:description" property="og:description" content="DS Array with Introduction, Asymptotic Analysis, Array, Pointer, Structure, Singly Linked List, Doubly Linked List, Circular Linked List, Binary Search, Linear Search, Sorting, Bucket Sort, Comb Sort, Shell Sort, Heap Sort, Merge Sort, Selection Sort, Counting Sort, Stack, Qene, Circular Quene, Graph, Tree, B Tree, B+ Tree, Avl Tree etc."><meta property="og:url" content="https://www.javatpoint.com/data-structure-array"><meta property="og:site_name" content="www.javatpoint.com"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@pagejavatpoint"><meta name="twitter:domain" content="www.javatpoint.com"><meta name="twitter:creator" content="@pagejavatpoint">
+<link href="https://www.javatpoint.com/manifest.json" rel="manifest">
+<link rel="preconnect" href="https://a.pub.network/" crossorigin="">
+<link rel="preconnect" href="https://b.pub.network/" crossorigin="">
+<link rel="preconnect" href="https://c.pub.network/" crossorigin="">
+<link rel="preconnect" href="https://d.pub.network/" crossorigin="">
+<link rel="preconnect" href="https://c.amazon-adsystem.com/" crossorigin="">
+<link rel="preconnect" href="https://s.amazon-adsystem.com/" crossorigin="">
+<link rel="preconnect" href="https://secure.quantserve.com/" crossorigin="">
+<link rel="preconnect" href="https://rules.quantcount.com/" crossorigin="">
+<link rel="preconnect" href="https://pixel.quantserve.com/" crossorigin="">
+<link rel="preconnect" href="https://cmp.quantcast.com/" crossorigin="">
+<link rel="preconnect" href="https://btloader.com/" crossorigin="">
+<link rel="preconnect" href="https://api.btloader.com/" crossorigin="">
+<link rel="preconnect" href="https://confiant-integrations.global.ssl.fastly.net/" crossorigin="">
+
+
+
+<link rel="stylesheet" href="./Array (Data Structures) - javatpoint_files/cls.css">
+<script data-cfasync="false" type="text/javascript">
+  var freestar = freestar || {};
+  freestar.queue = freestar.queue || [];
+  freestar.config = freestar.config || {};
+  freestar.config.enabled_slots = [];
+  freestar.initCallback = function () { (freestar.config.enabled_slots.length === 0) ? freestar.initCallbackCalled = false : freestar.newAdSlots(freestar.config.enabled_slots) }
+</script><style type="text/css" id="operaUserStyle"></style>
+<script src="./Array (Data Structures) - javatpoint_files/pubfig.min.js.download" data-cfasync="false" async=""></script>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style><style type="text/css">:root [href^="//x4pollyxxpush.com/"], :root zeus-ad, :root topadblock, :root span[id^="ezoic-pub-ad-placeholder-"], :root guj-ad, :root gpt-ad, :root div[id^="zergnet-widget"], :root div[id^="yandex_ad"], :root div[id^="vuukle-ad-"], :root div[id^="sticky_ad_"], :root div[id^="rc-widget-"], :root div[id^="optidigital-adslot"], :root div[id^="gpt_ad_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="dfp-ad-"], :root div[id^="advads_ad_"], :root div[id^="adspot-"], :root div[id^="ads300_250-widget-"], :root div[id^="ads300_100-widget-"], :root div[id^="ads250_250-widget-"], :root div[id^="adrotate_widgets-"], :root div[id^="_vdo_ads_player_ai_"], :root div[id*="ScriptRoot"], :root div[id*="MarketGid"], :root div[data-native_ad], :root div[data-mini-ad-unit], :root div[data-insertion], :root div[data-id-advertdfpconf], :root hl-adsense, :root div[data-contentexchange-widget], :root div[data-content="Advertisement"], :root div[data-alias="300x250 Ad 2"], :root div[data-alias="300x250 Ad 1"], :root div[data-adzone], :root div[data-adunit-path], :root div[data-ad-wrapper], :root div[data-ad-targeting], :root div[data-ad-placeholder], :root div[class^="native-ad-"], :root div[data-dfp-id], :root div[class^="kiwi-ad-wrapper"], :root div[class^="Adstyled__AdWrapper-"], :root div[aria-label="Ads"], :root display-ads, :root display-ad-component, :root bottomadblock, :root atf-ad-slot, :root aside[id^="adrotate_widgets-"], :root article.ad, :root ark-top-ad, :root app-advertisement, :root app-ad, :root amp-fx-flying-carpet, :root amp-embed[type="taboola"], :root amp-connatix-player, :root amp-ad-custom, :root amp-ad, :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root citrus-ad-wrapper, :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="https://yogacomplyfuel.com/"], :root a[href^="https://www.sugarinstant.com/?partner_id="], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="https://www.onlineusershielder.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="https://www.nudeidols.com/cams/"], :root a[href^="https://www.mypornstarcams.com/landing/click/"], :root a[href^="https://www.kingsoffetish.com/tour?partner_id="], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="https://www.financeads.net/tc.php?"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root div[class^="Display_displayAd"], :root a[href^="https://www.sheetmusicplus.com/?aff_id="], :root a[href^="https://www.bang.com/?aff="], :root a[href^="https://www.adxsrve.com/"], :root [href^="//mage98rquewz.com/"], :root a[href^="https://webroutetrk.com/"], :root a[href^="https://twinrdsyn.com/"], :root a[href^="https://tsartech.g2afse.com/"], :root [href^="https://www.mypatriotsupply.com/"] > img, :root a[href^="https://trk.softonixs.xyz/"], :root a[href^="https://trk.nfl-online-streams.club/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://track.afcpatrk.com/"], :root a[href^="https://torguard.net/aff.php"] > img, :root div[data-adname], :root a[href^="https://thechleads.pro/"], :root .OUTBRAIN[data-widget-id^="FMS_REELD_"], :root [data-role="tile-ads-module"], :root a[href^="https://adsrv4k.com/"], :root a[href^="https://go.xlviirdr.com"], :root a[href^="https://thaudray.com/"], :root a[href^="https://www.5mno3.com/"], :root a[href^="https://taghaugh.com/"], :root a[href^="https://click.candyoffers.com/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://t.aslnk.link/"], :root a[href^="https://t.adating.link/"], :root a[href^="https://go.trackitalltheway.com/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://syndication.dynsrvtbg.com/"], :root a[href^="https://streamate.com/landing/click/"], :root a[href^="https://ad.doubleclick.net/"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="https://sTaRtGAMing.net/tienda/"], :root [data-adblockkey], :root a[href^="https://sTARtgamIng.net/tienda/"], :root a[href^="https://aweptjmp.com/"], :root a[href^="https://s.zlinkc.com/"], :root a[href^="https://www.mrskin.com/account/"], :root a[href^="https://s.optzsrv.com/"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root a[href^="https://reinstandpointdumbest.com/"], :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://refpa4903566.top/"], :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root a[href^="https://pb-track.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root ps-connatix-module, :root div[id^="ad_position_"], :root a[href^="https://ovb.im/"], :root div[id^="ad-div-"], :root a[href^="https://newbinotracs.com/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root [href^="https://stvkr.com/"], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root [href^="https://www.herbanomic.com/"] > img, :root a[href^="https://maymooth-stopic.com/"], :root a[href^="https://loboclick.com"], :root .nya-slot[style], :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="https://lobimax.com/"], :root a[href^="https://lead1.pl/"], :root a[href^="https://refpa.top/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://safesurfingtoday.com/"][href*="?skip="], :root a[href^="https://ads.leovegas.com/redirect.aspx?"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://track.adform.net/"], :root [data-css-class="dfp-inarticle"], :root .card-captioned.crd > .crd--cnt > .s2nPlayer, :root a[href^="https://go.tmrjmp.com"], :root a[href^="https://l.hyenadata.com/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://itubego.com/video-downloader/?affid="], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href^="https://incisivetrk.cvtr.io/click?"], :root [data-revive-zoneid], :root a[href^="https://googleads.g.doubleclick.net/pcs/click"], :root a[href^="https://clk.wrenchsound.store/"], :root a[href^="https://go.zybrdr.com"], :root [href^="http://join.michelle-austin.com/"], :root [class^="tile-picker__CitrusBannerContainer-sc-"], :root a[href^="https://go.xxxiijmp.com"], :root a[href^="https://go.xtbaffiliates.com/"], :root a[href^="https://ismlks.com/"], :root a[href^="//a.bestcontentfare.top/"], :root [href^="https://www.mypillow.com/"] > img, :root a[href^="https://azpresearch.club/"], :root a[href^="https://go.xlirdr.com"], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://go.goaserv.com/"], :root a[href^="https://go.dmzjmp.com"], :root a[href^="https://twinrdsrv.com/"], :root a[href^="https://go.admjmp.com/"], :root [href^="https://kingered-banctours.com/"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a-ad, :root a[href^="https://affiliate.rusvpn.com/click.php?"], :root a[href^="https://geniusdexchange.com/"], :root a[href^="https://frameworkdeserve.com/"], :root a[href^="https://flirtandsweets.life/"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://financeads.net/tc.php?"], :root div[data-native-ad], :root a[href^="https://engine.trackingdesks.com/"], :root [href^="https://totlnkcl.com/"], :root a[href^="https://www.adskeeper.com"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root [href^="https://www.reimageplus.com/"], :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href^="https://engine.blueistheneworanges.com/"], :root a[href^="https://dl-protect.net/"], :root [href="//jjgirls.com/sex/ChaturbateCams"], :root a[href^="https://datingoffers30.info/"], :root a[href^="https://clixtrac.com/"], :root a[href^="https://click.linksynergy.com/fs-bin/"] > img, :root ad-shield-ads, :root a[href^="https://sTartGAMinG.net/tienda/"], :root AD-TRIPLE-BOX, :root a[href^="https://click.hoolig.app/"], :root a[href^="https://track.totalav.com/"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href^="https://porntubemate.com/"], :root a[href^="http://www.gfrevenge.com/landing/"], :root a[href^="https://clickadilla.com/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href^="https://go.xlvirdr.com"], :root a[href^="http://www.iyalc.com/"], :root a[href^="https://claring-loccelkin.com/"], :root [class^="s2nPlayer"], :root a[href^="https://chaturbate.jjgirls.com/?track="], :root a[href^="https://chaturbate.com/in/?track="], :root a[href^="https://chaturbate.com/in/?tour="], :root a[href^="https://cams.imagetwist.com/in/?track="], :root a[href^="https://go.gldrdr.com/"], :root a[href^="https://buqkrzbrucz.com/"], :root a[href^="https://affcpatrk.com/"], :root a[href^="https://bongacams2.com/track?"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="https://bngpt.com/"], :root a[href^="https://bluedelivery.pro/"], :root a[href^="https://black77854.com/"], :root a[href^="https://bc.game/"], :root a[href^="https://ndt5.net/"], :root a[href^="https://batheunits.com/"], :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root a[href^="https://banners.livepartners.com/"], :root a[href^="//whulsaux.com/"], :root a[href^="https://m.do.co/c/"] > img, :root [href="https://masstortfinancing.com"] img, :root a[href^="https://bongacams10.com/track?"], :root a[href^="https://albionsoftwares.com/"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://convertmb.com/"], :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://intenseaffiliates.com/redirect/"], :root a[href^="https://ads.ad4game.com/"], :root a[href^="https://syndication.optimizesrv.com/"], :root a[href^="https://affpa.top/"], :root a[href^="https://adnetwrk.com/"], :root a[href^="https://adjoincomprise.com/"], :root [href^="http://misslinkvocation.com/"], :root a[href^="https://adclick.g.doubleclick.net/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root [href^="https://r.kraken.com/"], :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root [href^="http://clicks.totemcash.com/"], :root a[href^="https://misspkl.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root a[href^="https://ad.kubiccomps.icu/"], :root a[href^="https://a2.adform.net/"], :root a[href^="https://iactrivago.ampxdirect.com/"], :root a[href^="https://a.medfoodhome.com/"], :root a[href^="https://adultfriendfinder.com/go/"], :root a[href^="https://a.bestcontentoperation.top/"], :root a[href^="http://static.fleshlight.com/images/banners/"], :root a[href^="https://a.adtng.com/"], :root [data-m-ad-id], :root a[href^="https://a-ads.com/"], :root a[href^="https://join.virtualtaboo.com/track/"], :root a[href^="https://StarTGAminG.net/tienda/"], :root a[href^="https://cpmspace.com/"], :root [href^="https://freecourseweb.com/"] > .sitefriend, :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="https://1betandgonow.com/"], :root [href="https://ourgoldguy.com/contact/"] img, :root a[href^="https://brightadnetwork.com/"], :root [href^="https://www.avantlink.com/click.php"] img, :root a[href^="http://www.onwebcam.com/random?t_link="], :root a[href^="http://www.mrskin.com/tour"], :root a[href^="https://agacelebir.com/"], :root a[href^="https://spygasm.com/track?"], :root a[href^="http://d2.zedo.com/"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="http://trk.globwo.online/"], :root a[href^="http://traffic.tc-clicks.com/"], :root a[href^="http://tour.mrskin.com/"], :root a[href^="https://funkydaters.com/"], :root [id^="ad_sky"], :root a[href^="http://https://www.get-express-vpn.com/offer/"], :root div[id^="google_dfp_"], :root a[href^="http://googleads.g.doubleclick.net/pcs/click"], :root [href^="http://go.cm-trk2.com/"], :root a[href^="http://click.payserve.com/"], :root a[href^="https://porngames.adult/?SID="], :root a[href^="https://landing1.brazzersnetwork.com"], :root #slashboxes > .deals-rail, :root [href^="http://globsads.com/"], :root [href^="https://www.brighteonstore.com/products/"] img, :root a[href^="http://bc.vc/?r="], :root a[href^="https://mityneedn.com/"], :root [href^="http://homemoviestube.com/"], :root a[href^="http://ad.doubleclick.net/"], :root a[href^="//zunsoach.com/"], :root a[href^="//pubads.g.doubleclick.net/"], :root a[href^="https://femglobal.app/"], :root a[href^="//go.eabids.com/"], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root [href^="https://join.playboyplus.com/track/"], :root a[href^="//ardslediana.com/"], :root [data-d-ad-id], :root a[href*=".engine.adglare.net/"], :root [href^="https://awbbjmp.com/"], :root a[href^="https://tracker.loropartners.com/"], :root #kt_player > a[target="_blank"], :root a[href*=".cfm?fp="][href*="&maxads="], :root [data-ad-width], :root a[href^="http://bodelen.com/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root [href^="https://cpa.10kfreesilver.com/"], :root a[href^="https://a.bestcontentfood.top/"], :root a[href^="http://wct.link/"], :root [href^="https://goldforyourfuture.com/clk.trk"] img, :root [href^="https://infinitytrk.com/"], :root [onclick^="location.href='http://www.reimageplus.com"], :root [id^="section-ad-banner"], :root a[href^="https://go.julrdr.com/"], :root .trc_rbox_div .syndicatedItemUB, :root [href^="https://zone.gotrackier.com/"], :root a[href^="https://visit-website.com/"], :root [href^="https://detachedbates.com/"], :root [href^="https://www.targetingpartner.com/"], :root a[href^="https://fourwhenstatistics.com/"], :root [href^="https://www.restoro.com/"], :root a[href^="https://join.virtuallust3d.com/"], :root .section-subheader > .section-hotel-prices-header, :root [href^="https://go.affiliatexe.com/"], :root [href^="https://www.hostg.xyz/"] > img, :root [href^="https://ilovemyfreedoms.com/landing-"], :root a[href^="https://staRTgaming.net/tienda/"], :root a[href^="https://STaRtgAmInG.net/tienda/"], :root a[href^="http://adultfriendfinder.com/go/"], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root a[href^="https://tour.mrskin.com/"], :root div[id^="ad-position-"], :root a[href^="http://affiliate.glbtracker.com/"], :root a[href^="https://leg.xyz/?track="], :root div[id^="crt-"][style], :root a[href^="http://adultgames.xxx/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root [href^="https://secure.bmtmicro.com/servlets/"], :root a[href^="https://losingoldfry.com/"], :root .scroll-fixable.rail-right > .deals-rail, :root [href^="https://routewebtk.com/"], :root a[href^="https://oackoubs.com/"], :root a[href^="https://ak.psaltauw.net/"], :root a[href^="https://go.cmtaffiliates.com/"], :root [data-name="adaptiveConstructorAd"], :root [href^="https://optimizedelite.com/"] > img, :root a[href^="https://awptjmp.com/"], :root a[href^="https://go.goasrv.com/"], :root [href^="http://mypillow.com/"] > img, :root a[href^="http://bongacams.com/track?"], :root a[href^="https://fleshlight.sjv.io/"], :root [data-ad-manager-id], :root a[href^="https://promo-bc.com/"], :root a[href^="https://clicks.pipaffiliates.com/"], :root [href^="https://noqreport.com/"] > img, :root a[href^="https://www.highperformancecpmgate.com/"], :root a[href^="https://t.grtyi.com/"], :root [href^="https://mylead.global/stl/"] > img, :root [href^="https://mypatriotsupply.com/"] > img, :root a[href^="https://fc.lc/ref/"], :root .vid-present > .van_vid_carousel__padding, :root span[data-ez-ph-id], :root [href^="https://track.aftrk1.com/"], :root div[id^="adngin-"], :root [data-rc-widget], :root a[href^="https://go.xxxijmp.com"], :root [href^="https://istlnkcl.com/"], :root [href^="https://go.xlrdr.com"], :root [href^="https://go.4rabettraff.com/"], :root a[href^="https://tm-offers.gamingadult.com/"], :root [href^="https://charmingdatings.life/"], :root [href^="https://glersakr.com/"], :root a[href^="https://1startfiledownload1.com/"], :root .trc_rbox_border_elm .syndicatedItem, :root a[href^="http://www.onclickmega.com/jump/next.php?"], :root a[href^="https://italarizege.xyz/"], :root a[href^="https://wittered-mainging.com/"], :root [href^="https://engine.gettopple.com/"], :root [data-id^="div-gpt-ad"], :root a[href^="https://k2s.cc/pr/"], :root [href^="https://affect3dnetwork.com/track/"], :root a[href^="https://camfapr.com/landing/click/"], :root [href="//sexcams.plus/"], :root a[href^="https://go.currency.com/"], :root .resultsList > div > div > div.G-5c[role="tab"][tabindex="0"], :root [href^="http://www.mypillow.com/"] > img, :root div[id^="div-ads-"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root [href^="https://join3.bannedsextapes.com"], :root div[data-spotim-slot], :root [href^="https://antiagingbed.com/discount/"] > img, :root a[href^="https://go.247traffic.com/"], :root [href^="https://join.girlsoutwest.com/"], :root [href^="http://trafficare.net/"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://adserver.adreactor.com/"], :root [href^="http://join.shemalesfromhell.com/"], :root [id^="ad_slider"], :root #searchResultsList > div > div[onclick$="'inline.ad'});"], :root [data-adbridg-ad-class], :root a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"], :root [href^="http://join.shemale.xxx/"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root [href^="http://www.fleshlightgirls.com/"], :root [href^="http://join.trannies-fuck.com/"], :root .trc_rbox .syndicatedItem, :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root a[href^="https://thefacux.com/"], :root a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"], :root [href^="http://join.rodneymoore.com/"], :root [href^="https://shrugartisticelder.com"], :root a[href^="https://staRTgamIng.net/tienda/"], :root div[id^="lazyad-"], :root a[href^="http://com-1.pro/"], :root [href="https://www.masstortfinancing.com/"] > img, :root .ob_container .item-container-obpd, :root [href^="https://mypillow.com/"] > img, :root [href^="https://ad.admitad.com/"], :root [data-testid="ad_testID"], :root a[href^="https://u.expresstech.io/"], :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root a[href^="https://lnkxt.bannerator.com/"], :root [href="https://jdrucker.com/gold"] > img, :root [href^="https://v.investologic.co.uk/"], :root [href^="https://cipledecline.buzz/"], :root a[href^="https://go.xxxjmp.com"], :root #leader-companion > a[href], :root [data-desktop-ad-id], :root [href^="https://wct.link/"], :root div[recirculation-ad-container], :root [href^="https://traffserve.com/"], :root [data-type="ad-vertical"], :root a[href^="https://track.ultravpn.com/"], :root [href^="https://goldcometals.com/clk.trk"], :root a[href^="https://go.hpyjmp.com"], :root [href^="https://mystore.com/"] > img, :root [data-mobile-ad-id], :root a[href^="http://tc.tradetracker.net/"] > img, :root a[href^="http://affiliates.thrixxx.com/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root [data-template-type="nativead"], :root [data-ad-name], :root [data-ez-name], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root [data-dynamic-ads], :root a[href^="http://go.xtbaffiliates.com/"], :root a[href^="https://consali.com/"], :root .grid > .container > #aside-promotion, :root DFP-AD, :root .trc_related_container div[data-item-syndicated="true"], :root a[href^="https://www.liquidfire.mobi/"], :root [href^="https://click2cvs.com/"], :root a[href^="https://startgAming.net/tienda/"], :root [href^="https://safer-redirection.com"], :root [onclick*="content.ad/"], :root AMP-AD, :root [data-ad-cls], :root [id^="ad-wrap-"], :root div[id^="taboola-stream-"], :root [href^="https://go.astutelinks.com/"], :root [class^="amp-ad-"], :root [href^="https://affiliate.fastcomet.com/"] > img, :root [class^="adDisplay-module"], :root AD-SLOT, :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root [href^="http://join.shemalepornstar.com/"], :root a[href^="https://go.xlviiirdr.com"], :root .trc_rbox_div .syndicatedItem, :root div[data-adunit], :root app-large-ad, :root [href^="https://turtlebids.irauctions.com/"] img, :root [data-ad-module], :root .plistaList > .itemLinkPET, :root [href^="https://gmxvmvptfm.com/"], :root [href^="https://trackfin.asia/"], :root .plistaList > .plista_widget_underArticle_item[data-type="pet"], :root a[href*="//lkstrck2.com/"], :root a[href^="https://bs.serving-sys.com"], :root [href^="http://residenceseeingstanding.com/"], :root a[href^="https://traffdaq.com/"], :root [class^="div-gpt-ad"], :root a[href^="http://partners.etoro.com/"], :root [data-advadstrackid], :root a[href^="https://refpazkjixes.top/"], :root #mgb-container > #mgb, :root [href^="https://www.cloudways.com/en/?id"], :root a[href^="https://trk.sportsflix4k.club/"], :root a[href^="https://go.xlivrdr.com"], :root a[href^="https://cam4com.go2cloud.org/"], :root a[href^="http://li.blogtrottr.com/click?"] { display: none !important; }</style></head><link rel="stylesheet" type="text/css" href="chrome-extension://kchaponcodemjigejilffhfchecpgdpf/css/content_textarea.css">
+<body onload="highlightlink()">
+
+
+<div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header"><table style="width:100%;margin-bottom:5px"> <tbody><tr> <td> <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com/"><img src="./Array (Data Structures) - javatpoint_files/jtp_logo.png" alt="Javatpoint Logo"></a> </div> <div style="float:left;width:60%;"><script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> </div> </td> </tr></tbody></table> </div>
+<div class="headermobile">
+<div style="margin-top:10px;padding:0px;text-align:left;">
+<span style="float:left"><input type="image" src="./Array (Data Structures) - javatpoint_files/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span>
+<span style="float:left"><a href="https://www.javatpoint.com/"><img src="./Array (Data Structures) - javatpoint_files/jtp_logo(1).png" alt="Javatpoint Logo"></a></span>
+</div>
+<div style="margin:0px;padding:0px;clear:both">
+<script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+
+</div>
+</div>
+<div id="link" style="clear:both;z-index:999"> <div class="ddsmoothmenu">
+<ul>
+<li><a href="https://www.javatpoint.com/">Home</a></li>
+<li><a href="https://www.javatpoint.com/data-structure-tutorial" class="selected">Data Structure</a></li>
+<li><a href="https://www.javatpoint.com/c-programming-language-tutorial">C</a></li>
+<li><a href="https://www.javatpoint.com/cpp-tutorial">C++</a></li>
+<li><a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a></li>
+<li><a href="https://www.javatpoint.com/java-tutorial">Java</a></li>
+<li><a href="https://www.javatpoint.com/sql-tutorial">SQL</a></li>
+<li><a href="https://www.javatpoint.com/html-tutorial">HTML</a></li>
+<li><a href="https://www.javatpoint.com/css-tutorial">CSS</a></li>
+<li><a href="https://www.javatpoint.com/javascript-tutorial">JavaScript</a></li>
+<li><a href="https://www.javatpoint.com/ajax-tutorial">Ajax</a></li>
+<li><a href="https://www.javatpoint.com/android-tutorial">Android</a></li>
+<li><a href="https://www.javatpoint.com/cloud-computing">Cloud</a></li>
+<li><a href="https://www.javatpoint.com/design-patterns-in-java">Design Pattern</a></li>
+<li><a href="https://www.javatpoint.com/free-java-projects">Projects</a></li>
+</ul>
+<br style="clear: left">
+</div></div>
+<div class="mobilemenu" style="clear:both">
+
+<ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4=" data-push="1"></ins><script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script>
+</div>
+<div id="menu" style="min-height: 12334px">
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DS Tutorial</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/data-structure-tutorial">DS Tutorial</a>
+<a href="https://www.javatpoint.com/data-structure-introduction">DS Introduction</a>
+<a href="https://www.javatpoint.com/data-structure-algorithm">DS Algorithm</a>
+<a href="https://www.javatpoint.com/data-structure-asymptotic-analysis">Asymptotic Analysis</a>
+<a href="https://www.javatpoint.com/data-structure-pointer">DS Pointer</a>
+<a href="https://www.javatpoint.com/data-structure-structure">DS Structure</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DS Array</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/data-structure-array" style="color: black;"><strong>DS Array</strong> <img src="./Array (Data Structures) - javatpoint_files/open-12.png" alt="open link"></a>
+<a href="https://www.javatpoint.com/data-structure-2d-array">2D Array</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DS Linked List</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/ds-linked-list">Linked List</a>
+<a href="https://www.javatpoint.com/ds-types-of-linked-list">Types of Linked List</a>
+<a href="https://www.javatpoint.com/singly-linked-list">Singly Linked List</a>
+<a href="https://www.javatpoint.com/doubly-linked-list">Doubly Linked List</a>
+<a href="https://www.javatpoint.com/circular-singly-linked-list">Circular Linked List</a>
+<a href="https://www.javatpoint.com/circular-doubly-linked-list">Circular Doubly List</a>
+<a href="https://www.javatpoint.com/skip-list-in-data-structure">Skip list in DS</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DS Stack</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/data-structure-stack">DS Stack</a>
+<a href="https://www.javatpoint.com/ds-array-implementation-of-stack">Array Implementation</a>
+<a href="https://www.javatpoint.com/ds-linked-list-implementation-of-stack">Linked List Implementation</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DS Queue</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/data-structure-queue">DS Queue</a>
+<a href="https://www.javatpoint.com/ds-types-of-queues">Types of Queues</a>
+<a href="https://www.javatpoint.com/array-representation-of-queue">Array Representation</a>
+<a href="https://www.javatpoint.com/linked-list-implementation-of-queue">Linked List Representation</a>
+<a href="https://www.javatpoint.com/circular-queue">Circular Queue</a>
+<a href="https://www.javatpoint.com/ds-deque">Deque</a>
+<a href="https://www.javatpoint.com/ds-priority-queue">Priority Queue</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DS Tree</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/tree">DS Tree</a>
+<a href="https://www.javatpoint.com/binary-tree">Binary Tree</a>
+<a href="https://www.javatpoint.com/binary-search-tree">Binary Search Tree</a>
+<a href="https://www.javatpoint.com/avl-tree">AVL Tree</a>
+<a href="https://www.javatpoint.com/b-tree">B Tree</a>
+<a href="https://www.javatpoint.com/b-plus-tree">B+ Tree</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DS Graph</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/ds-graph">DS Graph</a>
+<a href="https://www.javatpoint.com/graph-representation">Graph Implementation</a>
+<a href="https://www.javatpoint.com/breadth-first-search-algorithm">BFS Algorithm</a>
+<a href="https://www.javatpoint.com/depth-first-search-algorithm">DFS Algorithm</a>
+<a href="https://www.javatpoint.com/spanning-tree">Spanning Tree</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DS Searching</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/linear-search">Linear Search</a>
+<a href="https://www.javatpoint.com/binary-search">Binary Search</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DS Sorting</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/bubble-sort">Bubble Sort</a>
+<a href="https://www.javatpoint.com/bucket-sort">Bucket Sort</a>
+<a href="https://www.javatpoint.com/comb-sort">Comb Sort</a>
+<a href="https://www.javatpoint.com/counting-sort">Counting Sort</a>
+<a href="https://www.javatpoint.com/heap-sort">Heap Sort</a>
+<a href="https://www.javatpoint.com/insertion-sort">Insertion Sort</a>
+<a href="https://www.javatpoint.com/merge-sort">Merge Sort</a>
+<a href="https://www.javatpoint.com/quick-sort">Quick Sort</a>
+<a href="https://www.javatpoint.com/radix-sort">Radix Sort</a>
+<a href="https://www.javatpoint.com/selection-sort">Selection Sort</a>
+<a href="https://www.javatpoint.com/shell-sort">Shell Sort</a>
+<a href="https://www.javatpoint.com/bitonic-sort">Bitonic Sort</a>
+<a href="https://www.javatpoint.com/cocktail-sort">Cocktail Sort</a>
+<a href="https://www.javatpoint.com/cycle-sort">Cycle Sort</a>
+<a href="https://www.javatpoint.com/tim-sort">Tim Sort</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Differences</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/linear-vs-non-linear-data-structure">Linear vs non-linear</a>
+<a href="https://www.javatpoint.com/ds-array-vs-linked-list">Array vs linked list</a>
+<a href="https://www.javatpoint.com/ds-stack-vs-queue">Stack vs queue</a>
+<a href="https://www.javatpoint.com/ds-linear-vs-circular-queue">Linear vs Circular Queue</a>
+<a href="https://www.javatpoint.com/ds-linear-search-vs-binary-search">Linear Search vs Binary Search</a>
+<a href="https://www.javatpoint.com/singly-linked-list-vs-doubly-linked-list">Singly Linked List vs Doubly Linked List</a>
+<a href="https://www.javatpoint.com/binary-tree-vs-binary-search-tree">Binary vs Binary Search Tree</a>
+<a href="https://www.javatpoint.com/tree-vs-graph-data-structure">Tree vs Graph</a>
+<a href="https://www.javatpoint.com/binary-search-tree-vs-avl-tree">Binary Search tree vs AVL tree</a>
+<a href="https://www.javatpoint.com/red-black-tree-vs-avl-tree">Red Black Tree vs AVL tree</a>
+<a href="https://www.javatpoint.com/b-tree-vs-bplus-tree">B tree vs B+ tree</a>
+<a href="https://www.javatpoint.com/quick-sort-vs-merge-sort">Quick Sort vs Merge Sort</a>
+<a href="https://www.javatpoint.com/bfs-vs-dfs">BFS vs DFS</a>
+<a href="https://www.javatpoint.com/stack-vs-heap">Stack vs Heap</a>
+<a href="https://www.javatpoint.com/bubble-sort-vs-selection-sort">Bubble sort vs. Selection sort</a>
+<a href="https://www.javatpoint.com/ds-stack-vs-array">Stack vs Array</a>
+<a href="https://www.javatpoint.com/full-binary-tree-vs-complete-binary-tree">Full Binary Tree vs Complete Binary Tree</a>
+<a href="https://www.javatpoint.com/binary-tree-vs-b-tree">Binary Tree vs B Tree</a>
+<a href="https://www.javatpoint.com/primitive-vs-non-primitive-data-structure">Primitive vs non-primitive data structure</a>
+<a href="https://www.javatpoint.com/data-types-vs-data-structure">Data types vs data structure</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Misc</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/trie-data-structure">Trie Data Structure</a>
+<a href="https://www.javatpoint.com/heap-data-structure">Heap Data Structure</a>
+<a href="https://www.javatpoint.com/splay-tree">Splay Tree</a>
+<a href="https://www.javatpoint.com/fundamental-of-the-data-structure">Fundamental of the DS</a>
+<a href="https://www.javatpoint.com/hash-table">Hash Table</a>
+<a href="https://www.javatpoint.com/preorder-traversal">Preorder Traversal</a>
+<a href="https://www.javatpoint.com/tree-traversal">Tree Traversal</a>
+<a href="https://www.javatpoint.com/implementation-of-queue-using-stacks">Implementation of Queue using Stacks</a>
+<a href="https://www.javatpoint.com/implementation-of-stack-using-queue">Implementation of Stack using Queue</a>
+<a href="https://www.javatpoint.com/binomial-heap">Binomial Heap</a>
+<a href="https://www.javatpoint.com/postorder-traversal">Postorder Traversal</a>
+<a href="https://www.javatpoint.com/sparse-matrix">Sparse Matrix</a>
+<a href="https://www.javatpoint.com/detect-loop-in-a-linked-list">Detect loop in a Linked list</a>
+<a href="https://www.javatpoint.com/inorder-traversal">Inorder Traversal</a>
+<a href="https://www.javatpoint.com/convert-infix-to-postfix-notation">Convert Infix to Postfix notation</a>
+<a href="https://www.javatpoint.com/convert-infix-to-prefix-notation">Convert infix to prefix notation</a>
+<a href="https://www.javatpoint.com/conversion-of-prefix-to-postfix-expression">Conversion of Prefix to Postfix expression</a>
+<a href="https://www.javatpoint.com/conversion-of-postfix-to-prefix-expression">Conversion of Postfix to Prefix expression</a>
+<a href="https://www.javatpoint.com/remove-loop-in-a-linked-list">Remove the loop in a Linked List</a>
+<a href="https://www.javatpoint.com/implement-two-stacks-in-an-array">Implement two stacks in an array</a>
+<a href="https://www.javatpoint.com/reverse-a-stack-using-recursion">Reverse a stack using recursion</a>
+<a href="https://www.javatpoint.com/detect-cycle-in-a-directed-graph">Detect cycle in a directed graph</a>
+<a href="https://www.javatpoint.com/optimal-binary-search-tree">Optimal Binary Search Tree</a>
+<a href="https://www.javatpoint.com/priority-queue-using-linked-list">Priority Queue using Linked list</a>
+<a href="https://www.javatpoint.com/balanced-binary-search-tree">Balanced Binary Search Tree</a>
+<a href="https://www.javatpoint.com/boundary-traversal-of-binary-tree">Boundary Traversal of Binary tree</a>
+<a href="https://www.javatpoint.com/diagonal-traversal-of-binary-tree">Diagonal Traversal of Binary Tree</a>
+<a href="https://www.javatpoint.com/vertical-traversal-of-a-binary-tree">Vertical Traversal of a Binary tree</a>
+<a href="https://www.javatpoint.com/graph-algorithms">Graph Algorithms</a>
+<a href="https://www.javatpoint.com/time-complexity-of-sorting-algorithms">Time Complexity of Sorting Algorithms</a>
+<a href="https://www.javatpoint.com/applications-of-stack-in-data-structure">Applications of Stack in Data Structure</a>
+<a href="https://www.javatpoint.com/dictionary-data-structure">Dictionary Data Structure</a>
+<a href="https://www.javatpoint.com/structured-data-and-unstructured-data">Structured Data and Unstructured Data</a>
+<a href="https://www.javatpoint.com/list-data-structure">List Data Structure</a>
+<a href="https://www.javatpoint.com/types-of-tree-in-data-structure">Types of Tree in Data Structure</a>
+<a href="https://www.javatpoint.com/abstract-data-type-in-data-structure">Abstract data type in data structure</a>
+<a href="https://www.javatpoint.com/disjoint-set-data-structure">Disjoint set data structure</a>
+<a href="https://www.javatpoint.com/dynamic-data-structure">Dynamic Data Structure</a>
+<a href="https://www.javatpoint.com/hash-function-in-data-structure">Hash Function in Data Structure</a>
+<a href="https://www.javatpoint.com/complete-binary-tree">Complete Binary Tree</a>
+<a href="https://www.javatpoint.com/threaded-binary-tree">Threaded Binary Tree</a>
+<a href="https://www.javatpoint.com/diameter-of-binary-tree">Diameter of Binary Tree</a>
+<a href="https://www.javatpoint.com/height-of-binary-tree">Height of Binary Tree</a>
+<a href="https://www.javatpoint.com/inorder-tree-traversal-without-stack">Inorder Tree Traversal without Stack</a>
+<a href="https://www.javatpoint.com/enumeration-of-binary-trees">Enumeration of Binary Trees</a>
+<a href="https://www.javatpoint.com/maximum-width-of-a-binary-tree">Maximum Width of a Binary Tree</a>
+<a href="https://www.javatpoint.com/types-of-graph-in-data-structure">Types of Graph in Data Structure</a>
+<a href="https://www.javatpoint.com/primitive-data-type">Primitive Data Type</a>
+<a href="https://www.javatpoint.com/semi-structured-data">Semi-Structured Data</a>
+<a href="https://www.javatpoint.com/advance-data-structures">Advance Data Structures</a>
+<a href="https://www.javatpoint.com/sort-an-array-of-0s-1s-and-2s">Sort an Array of 0's, 1's, and 2's</a>
+<a href="https://www.javatpoint.com/stock-span-problem">Stock Span Problem</a>
+<a href="https://www.javatpoint.com/implementation-of-deque-by-circular-array">Implementation of Deque by Circular Array</a>
+<a href="https://www.javatpoint.com/rotate-operation-in-linked-list">Rotate Operation in Linked List</a>
+<a href="https://www.javatpoint.com/subarray-with-given-sum">Subarray with given sum</a>
+<a href="https://www.javatpoint.com/self-organizing-list">Self-organizing List</a>
+<a href="https://www.javatpoint.com/unrolled-linked-list">Unrolled Linked List</a>
+<a href="https://www.javatpoint.com/types-of-sparse-matrices">Types of Sparse Matrices</a>
+<a href="https://www.javatpoint.com/application-of-linked-list">Application of Linked List</a>
+<a href="https://www.javatpoint.com/topological-sorting">Topological Sorting</a>
+<a href="https://www.javatpoint.com/ternary-search-tree">Ternary Search Tree</a>
+<a href="https://www.javatpoint.com/stock-span-problem">Stock Span Problem</a>
+<a href="https://www.javatpoint.com/treap-data-structure">Treap Data Structure</a>
+<a href="https://www.javatpoint.com/quicksort-on-doubly-linked-list">Quicksort on Doubly Linked List</a>
+<a href="https://www.javatpoint.com/inversion-count">Inversion count</a>
+<a href="https://www.javatpoint.com/expression-tree-in-data-structure">Expression tree in DS</a>
+<a href="https://www.javatpoint.com/garbage-collection-in-data-structure">Garbage Collection in DS</a>
+<a href="https://www.javatpoint.com/merge-sort-on-doubly-linked-list">Merge Sort on Doubly Linked List</a>
+<a href="https://www.javatpoint.com/sort-stack-using-recursion">Sort Stack using Recursion</a>
+<a href="https://www.javatpoint.com/lifo-approach-in-data-structure">LIFO Approach in data structure</a>
+<a href="https://www.javatpoint.com/big-O-notation-in-data-structure">Big O Notation in DS</a>
+<a href="https://www.javatpoint.com/binary-tree-traversal-in-data-structure">Binary Tree Traversal in DS</a>
+<a href="https://www.javatpoint.com/queue-operations-in-data-structure">Queue Operations in DS</a>
+<a href="https://www.javatpoint.com/what-is-a-non-linear-data-structure">What is a Non-Linear Data Structure</a>
+<a href="https://www.javatpoint.com/fifo-approach-in-data-structure">FIFO Approach in data structure</a>
+<a href="https://www.javatpoint.com/what-are-connected-graphs-in-data-structure">What are connected graphs in data structure</a>
+<a href="https://www.javatpoint.com/which-python-data-structure-is-immutable">Which Python data structure is immutable</a>
+<a href="https://www.javatpoint.com/which-data-structure-is-used-by-map">Which data structure is used by map</a>
+<a href="https://www.javatpoint.com/what-is-iteration-in-data-structure">What is iteration in data structure</a>
+<a href="https://www.javatpoint.com/what-are-linear-search-and-binary-search-in-data-structure">What are linear search and binary search in data structure</a>
+<a href="https://www.javatpoint.com/hash-table-vs-stl-map">Hash Table vs STL Map</a>
+<a href="https://www.javatpoint.com/recamans-sequence">Recaman's Sequence</a>
+<a href="https://www.javatpoint.com/maximum-area-rectangle-created-by-selecting-four-sides-from-an-array">Maximum area rectangle created by selecting four sides from an array</a>
+<a href="https://www.javatpoint.com/maximum-number-of-distinct-nodes-in-a-root-to-leaf-path">Maximum number of distinct nodes in a root-to-leaf path</a>
+<a href="https://www.javatpoint.com/hashing-open-addressing-for-collision-handling">Hashing - Open Addressing for Collision Handling</a>
+<a href="https://www.javatpoint.com/introduction-to-hashing">Introduction to Hashing</a>
+<a href="https://www.javatpoint.com/separate-chaining-for-collision-handling">Separate chaining for Collision Handling</a>
+<a href="https://www.javatpoint.com/check-if-a-given-array-contains-duplicate-elements-within-k-distance-from-each-other">Check if a given array contains duplicate elements within k distance from each other</a>
+<a href="https://www.javatpoint.com/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x">Given an array A[] and a number x, check for pair in A[] with sum as x (aka Two Sum)</a>
+<a href="https://www.javatpoint.com/find-number-of-employees-under-every-manager">Find number of Employees Under every Manager</a>
+<a href="https://www.javatpoint.com/union-and-intersection-of-two-linked-lists">Union and Intersection of two Linked Lists</a>
+<a href="https://www.javatpoint.com/kth-largest-element-in-an-array">Kth Largest element in an array</a>
+<a href="https://www.javatpoint.com/sort-an-almost-sorted-k-sorted-or-nearly-sorted-array">Sort an almost-sorted, k-sorted or nearly-sorted array</a>
+<a href="https://www.javatpoint.com/fibonacci-heap">Fibonacci Heap</a>
+<a href="https://www.javatpoint.com/find-whether-an-array-is-subset-of-another-array">Find whether an array is subset of another array</a>
+<a href="https://www.javatpoint.com/print-a-binary-tree-in-vertical-order">Print a Binary Tree in Vertical Order</a>
+<a href="https://www.javatpoint.com/tournament-tree">Tournament Tree (Winner Tree)</a>
+<a href="https://www.javatpoint.com/lazy-propagation-in-segment-tree">Lazy Propagation in Segment Tree</a>
+<a href="https://www.javatpoint.com/segment-tree-range-minimum-query">Segment Tree - Range Minimum Query</a>
+<a href="https://www.javatpoint.com/segment-tree-sum-of-given-range">Segment Tree - Sum of given Range</a>
+<a href="https://www.javatpoint.com/2-3-trees-search-insertion-and-deletion">2-3 Trees (Search, Insertion, and Deletion)</a>
+<a href="https://www.javatpoint.com/print-kth-least-significant-bit-of-a-number">Print kth least significant bit of a number</a>
+<a href="https://www.javatpoint.com/add-two-numbers-represented-by-linked-lists">Add two numbers represented by linked lists</a>
+<a href="https://www.javatpoint.com/adding-one-to-the-number-represented-as-array-of-digits">Adding one to the number represented as array of digits</a>
+<a href="https://www.javatpoint.com/find-precedence-characters-form-a-given-sorted-dictionary">Find precedence characters form a given sorted dictionary</a>
+<a href="https://www.javatpoint.com/check-if-any-anagram-of-a-string-is-palindrome-or-not">Check if any anagram of a string is palindrome or not</a>
+<a href="https://www.javatpoint.com/minimum-insertions-to-form-a-palindrome">Minimum Insertions to form a Palindrome</a>
+<a href="https://www.javatpoint.com/allocate-minimum-number-of-pages">Allocate Minimum Number of Pages</a>
+<a href="https://www.javatpoint.com/assembly-line-scheduling">Assembly Line Scheduling</a>
+<a href="https://www.javatpoint.com/breadth-first-search-or-bfs-for-a-graph">Breadth First Search or BFS for a Graph</a>
+<a href="https://www.javatpoint.com/find-an-element-in-array-such-that-sum-of-the-left-array-is-equal-to-the-sum-of-the-right-array">Find an element in array such that sum of the left array is equal to the sum of the right array</a>
+<a href="https://www.javatpoint.com/bridges-in-a-graph">Bridges in a Graph</a>
+<a href="https://www.javatpoint.com/bubble-sort-in-javascript">Bubble Sort in JavaScript</a>
+<a href="https://www.javatpoint.com/burn-the-binary-tree-from-the-target-node">Burn the Binary tree from the Target node</a>
+<a href="https://www.javatpoint.com/lowest-common-ancestor-in-a-binary-search-tree">Lowest Common Ancestor in a Binary Search Tree</a>
+<a href="https://www.javatpoint.com/types-of-hash-functions-in-c">Types of Hash Functions in C</a>
+<a href="https://www.javatpoint.com/implement-dynamic-deque-using-templates-class-and-a-circular-array">Implement Dynamic Deque using Templates Class and a Circular Array</a>
+<a href="https://www.javatpoint.com/iterative-depth-first-traversal-of-graph">Iterative Depth First Traversal of Graph</a>
+<a href="https://www.javatpoint.com/linked-list-data-structure-in-cpp-with-illustration">Linked List Data Structure in C++ With Illustration</a>
+<a href="https://www.javatpoint.com/reverse-a-linked-list-in-groups-of-given-size">Reverse a Linked List in Groups of Given Size</a>
+<a href="https://www.javatpoint.com/reverse-alternate-k-nodes-in-a-singly-linked-list">Reverse Alternate K nodes in a Singly Linked List</a>
+<a href="https://www.javatpoint.com/when-should-i-use-a-list-vs-a-linkedlist">When should I use a List vs a LinkedList</a>
+<a href="https://www.javatpoint.com/why-is-deleting-in-a-singly-linked-list-O-1">Why is deleting in a Singly Linked List O(1)</a>
+<a href="https://www.javatpoint.com/construct-full-binary-tree-using-its-preorder-traversal-and-preorder-traversal-of-its-mirror-tree">Construct Full Binary Tree using its Preorder Traversal and Preorder Traversal of its Mirror Tree</a>
+<a href="https://www.javatpoint.com/find-relative-complement-of-two-sorted-arrays">Find Relative Complement of two Sorted Arrays</a>
+<a href="https://www.javatpoint.com/handshaking-lemma-and-interesting-tree-properties-dsa">Handshaking Lemma and Interesting Tree Properties -DSA</a>
+<a href="https://www.javatpoint.com/how-to-efficiently-implement-kstacks-in-a-single-array">How to Efficiently Implement kStacks in a Single Array</a>
+<a href="https://www.javatpoint.com/write-c-functions-that-modify-head-pointer-of-a-linked-list">Write C Functions that Modify Head Pointer of a Linked List</a>
+<a href="https://www.javatpoint.com/introduction-to-ant-colony-optimization">Introduction to Ant Colony Optimization</a>
+<a href="https://www.javatpoint.com/what-is-array">What is Array</a>
+<a href="https://www.javatpoint.com/practical-byzantine-fault-tolerance">The practical Byzantine Fault Tolerance (pBFT)</a>
+<a href="https://www.javatpoint.com/applications-of-queue-data-structure">Applications of Queue Data Structure</a>
+<a href="https://www.javatpoint.com/line-graph">Line Graph</a>
+<a href="https://www.javatpoint.com/symmetric-binary-tree">Symmetric Binary Tree</a>
+<a href="https://www.javatpoint.com/avl-tree-advantages">AVL Tree Advantages</a>
+<a href="https://www.javatpoint.com/avl-tree-time-complexity">AVL Tree Time Complexity</a>
+<a href="https://www.javatpoint.com/merge-two-binary-trees">Merge Two Binary Trees</a>
+<a href="https://www.javatpoint.com/stack-operations-in-data-structure">Stack Operations in Data Structure</a>
+<a href="https://www.javatpoint.com/self-balancing-binary-search-trees">Self-Balancing Binary Search Trees</a>
+<a href="https://www.javatpoint.com/sliding-window-maximum-maximum-of-all-subarrays-of-size-k">Sliding Window Maximum (Maximum of all Subarrays of size K)</a>
+<a href="https://www.javatpoint.com/avl-trees-operations">AVL Trees Operations</a>
+<a href="https://www.javatpoint.com/limitations-of-sack-in-data-structures">Limitations of Stack in Data Structures</a>
+<a href="https://www.javatpoint.com/representation-of-stack-in-data-structure">Representation of stack in data structure</a>
+<a href="https://www.javatpoint.com/advantages-of-threaded-binary-tree">Advantages of Threaded Binary Tree</a>
+<a href="https://www.javatpoint.com/serialize-and-deserialize-a-binary-tree">Serialize and Deserialize a Binary Tree</a>
+<a href="https://www.javatpoint.com/application-of-binary-tree">Application of Binary Tree</a>
+<a href="https://www.javatpoint.com/avl-tree-applications">AVL Tree Applications</a>
+<a href="https://www.javatpoint.com/b-tree-visualization">B Tree Visualization</a>
+<a href="https://www.javatpoint.com/properties-of-avl-trees">Properties of AVL Trees</a>
+<a href="https://www.javatpoint.com/push-and-pop-operation-in-stack-in-data-structure">Push and Pop Operation in Stack in Data Structure</a>
+<a href="https://www.javatpoint.com/binary-search-tree-implementation">Binary Search Tree Implementation</a>
+<a href="https://www.javatpoint.com/find-maximum-sum-by-replacing-the-subarray-in-given-range">Find Maximum Sum by Replacing the Subarray in Given Range</a>
+<a href="https://www.javatpoint.com/find-the-number-n-where-n-x-divisible-by-y-and-n-y-divisible-by-x">Find The Number N, Where (N+X) Divisible By Y And (N-Y) Divisible By X</a>
+<a href="https://www.javatpoint.com/find-values-of-p-and-q-satisfying-the-equation-n-p-2-q">Find Values of P and Q Satisfying the Equation N = P^2.Q</a>
+<a href="https://www.javatpoint.com/what-is-the-balance-factor-of-avl-tree">What is the Balance Factor of AVL Tree</a>
+<a href="https://www.javatpoint.com/avl-tree-implementation-in-golang">AVL Tree Implementation in Golang</a>
+<a href="https://www.javatpoint.com/concatenation-of-two-linked-lists-in-o-1-time">Concatenation of two Linked Lists in O(1) time</a>
+<a href="https://www.javatpoint.com/find-minimum-area-of-rectangle-formed-from-given-shuffled-coordinates">Find Minimum Area of Rectangle Formed from Given Shuffled Coordinates</a>
+<a href="https://www.javatpoint.com/find-the-length-of-maximum-path-in-given-matrix-for-each-index">Find the Length of Maximum Path in Given Matrix for Each Index</a>
+<a href="https://www.javatpoint.com/how-to-parse-an-array-of-objects-in-cpp-using-rapidjson">How to Parse an Array of Objects in C++ Using RapidJson</a>
+<a href="https://www.javatpoint.com/largest-bst-in-binary-tree">Largest BST in Binary Tree</a>
+<a href="https://www.javatpoint.com/how-to-print-string-literal-and-qstring-with-qdebug-in-cpp">How to Print String Literal and Qstring With Qdebug in C++</a>
+<a href="https://www.javatpoint.com/properties-of-binary-tree">Properties of Binary Tree</a>
+<a href="https://www.javatpoint.com/right-view-of-binary-tree">Right View of Binary Tree</a>
+<a href="https://www.javatpoint.com/strict-binary-tree">Strict Binary Tree</a>
+<a href="https://www.javatpoint.com/difference-between-comb-sort-and-shell-sort">Difference between Comb Sort and Shell Sort</a>
+<a href="https://www.javatpoint.com/full-binary-tree">Full Binary Tree</a>
+<a href="https://www.javatpoint.com/left-view-of-a-binary-tree">Left View of a Binary Tree</a>
+<a href="https://www.javatpoint.com/level-order-traversal-in-a-binary-tree">Level order Traversal in a Binary Tree</a>
+<a href="https://www.javatpoint.com/lowest-common-ancestor-of-a-binary-tree">Lowest Common Ancestor of a Binary Tree</a>
+<a href="https://www.javatpoint.com/top-view-of-a-binary-tree">Top View of a Binary Tree</a>
+<a href="https://www.javatpoint.com/types-of-binary-trees">Types of Binary Trees</a>
+<a href="https://www.javatpoint.com/b-tree-insertion">B Tree Insertion</a>
+<a href="https://www.javatpoint.com/evaluation-of-a-postfix-notation">Evaluation of a Postfix notation</a>
+<a href="https://www.javatpoint.com/b-plus-tree-insertion">B+ Tree Insertion</a>
+<a href="https://www.javatpoint.com/bottom-view-of-a-binary-tree">Bottom View of a Binary Tree</a>
+<a href="https://www.javatpoint.com/avl-tree-program-in-c">AVL Tree Program in C</a>
+<a href="https://www.javatpoint.com/b-tree-applications">B Tree Applications</a>
+<a href="https://www.javatpoint.com/b-tree-properties">B Tree Properties</a>
+<a href="https://www.javatpoint.com/how-to-search-insert-and-delete-in-an-unsorted-array">How to Search, Insert, and Delete in an Unsorted Array</a>
+<a href="https://www.javatpoint.com/count-non-leaf-nodes-in-a-binary-tree">Count Non-Leaf Nodes in a Binary Tree</a>
+<a href="https://www.javatpoint.com/get-the-level-of-a-given-key-in-a-binary-tree">Get the Level of a Given Key in a Binary Tree</a>
+<a href="https://www.javatpoint.com/double-ended-priority-queue">Double Ended Priority Queue</a>
+<a href="https://www.javatpoint.com/bplus-tree-deletion">B+ Tree Deletion</a>
+<a href="https://www.javatpoint.com/bplus-tree-insertion">B+ Tree Insertion</a>
+
+<a href="https://www.javatpoint.com/hashing-in-data-structure">Hashing in Data Structure</a>
+<a href="https://www.javatpoint.com/primitive-data-structure">Primitive Data Structure</a>
+<a href="https://www.javatpoint.com/find-if-binary-tree-satisfies-balanced-height-property">Find if Binary Tree Satisfies Balanced Height Property</a>
+<a href="https://www.javatpoint.com/find-the-largest-perfect-binary-tree-in-a-given-tree">Find the Largest Perfect Binary Tree in a Given Tree</a>
+<a href="https://www.javatpoint.com/find-immediate-parents-of-two-nodes-in-a-binary-tree">Find Immediate Parents of Two Nodes in a Binary Tree</a>
+<a href="https://www.javatpoint.com/applications-advantages-and-disadvantages-of-circular-doubly-linked-list">Applications, Advantages and Disadvantages of Circular Doubly linked List</a>
+<a href="https://www.javatpoint.com/sorting-techniques-in-data-structures">Sorting Techniques in Data Structures</a>
+<a href="https://www.javatpoint.com/find-clockwise-array-in-binary-search-tree">Find Clockwise Array in Binary Search Tree</a>
+<a href="https://www.javatpoint.com/find-duplicate-subtrees-in-binary-tree">Find Duplicate Subtrees in Binary Tree</a>
+<a href="https://www.javatpoint.com/find-the-index-of-the-number-using-a-binary-tree">Find the Index of the Number Using a Binary Tree</a>
+<a href="https://www.javatpoint.com/find-the-in-order-successor-of-a-node-in-a-binary-tree">Find the In-Order Successor of a Node in a Binary Tree</a>
+<a href="https://www.javatpoint.com/reversing-a-queue">Reversing a Queue</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DS MCQ</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/data-structure-mcq">Data Structure MCQ</a>
+<a href="https://www.javatpoint.com/advanced-data-structure-mcq">Advanced DS MCQ</a>
+</div>
+<img src="./Array (Data Structures) - javatpoint_files/wh.JPG" alt="JavaTpoint">
+<br>
+<div id="leftad" style="margin:left: 20px; position: sticky; top: 51px">
+
+
+<div align="center" data-freestar-ad="__160x600" id="javatpointcom_lefttrail_1">
+<script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "javatpointcom_lefttrail_1", slotId: "javatpointcom_lefttrail_1" });
+  </script>
+</div>
+
+</div>
+</div>
+<div class="onlycontent">
+<div class="onlycontentad">
+
+<div align="center" data-freestar-ad="__300x300 __650x150" id="javatpointcom_leaderboard_atf_article">
+<script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "javatpointcom_leaderboard_atf_article", slotId: "javatpointcom_leaderboard_atf_article" });
+  </script>
+</div>
+</div>
+<div class="onlycontentinner">
+<div id="city">
+<table>
+<tbody><tr><td>
+<div id="bottomnextup">
+<a class="next" href="https://www.javatpoint.com/data-structure-2d-array">next &#8594;</a>
+<a class="next" href="https://www.javatpoint.com/data-structure-structure">&#8592; prev</a>
+</div>
+<h1 class="h1">Array in Data Structure</h1>
+<p>In this article, we will discuss the array in data structure. Arrays are defined as the collection of similar types of data items stored at contiguous memory locations. It is one of the simplest data structures where each data element can be randomly accessed by using its index number.</p>
+<p>In C programming, they are the derived data types that can store the primitive type of data such as int, char, double, float, etc. For example, if we want to store the marks of a student in 6 subjects, then we don't need to define a different variable for the marks in different subjects. Instead, we can define an array that can store the marks in each subject at the contiguous memory locations.</p>
+<h3 class="h3">Properties of array</h3>
+<p>There are some of the properties of an array that are listed as follows -</p>
+<ul class="points">
+<li>Each element in an array is of the same data type and carries the same size that is 4 bytes.</li>
+<li>Elements in the array are stored at contiguous memory locations from which the first element is stored at the smallest memory location.</li>
+<li>Elements of the array can be randomly accessed since we can calculate the address of each element of the array with the given base address and the size of the data element.</li>
+</ul>
+<h3 class="h3">Representation of an array</h3>
+<p>We can represent an array in various ways in different programming languages. As an illustration, let's see the declaration of array in C language -</p>
+<img src="./Array (Data Structures) - javatpoint_files/ds-array.png" alt="Array in DS">
+<p>As per the above illustration, there are some of the following important points -</p>
+<ul class="points">
+<li>Index starts with 0.</li>
+<li>The array's length is 10, which means we can store 10 elements.</li>
+<li>Each element in the array can be accessed via its index.</li>
+</ul>
+<h3 class="h3">Why are arrays required?</h3>
+<p>Arrays are useful because -</p>
+<ul class="points">
+<li>Sorting and searching a value in an array is easier.</li>
+<li>Arrays are best to process multiple values quickly and easily.</li>
+<li><strong>Arrays are good for storing multiple values in a single variable -</strong> In computer programming, most cases require storing a large number of data of a similar type. To store such an amount of data, we need to define a large number of variables. It would be very difficult to remember the names of all the variables while writing the programs. Instead of naming all the variables with a different name, it is better to define an array and store all the elements into it.</li>
+</ul>
+<h3 class="h3">Memory allocation of an array</h3>
+<p>As stated above, all the data elements of an array are stored at contiguous locations in the main memory. The name of the array represents the base address or the address of the first element in the main memory. Each element of the array is represented by proper indexing.</p>
+<p>We can define the indexing of an array in the below ways -</p>
+<ol class="points">
+<li>0 (zero-based indexing): The first element of the array will be arr[0].</li>
+<li>1 (one-based indexing): The first element of the array will be arr[1].</li>
+<li>n (n - based indexing): The first element of the array can reside at any random index number.</li>
+</ol>
+<img src="./Array (Data Structures) - javatpoint_files/ds-array2.png" alt="Array in DS">
+<p>In the above image, we have shown the memory allocation of an array arr of size 5. The array follows a 0-based indexing approach. The base address of the array is 100 bytes. It is the address of arr[0]. Here, the size of the data type used is 4 bytes; therefore, each element will take 4 bytes in the memory.</p>
+<h3 class="h3">How to access an element from the array?</h3>
+<p>We required the information given below to access any random element from the array -</p>
+<ul class="points">
+<li>Base Address of the array.</li>
+<li>Size of an element in bytes.</li>
+<li>Type of indexing, array follows.</li>
+</ul>
+<p>The formula to calculate the address to access an array element -</p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>Byte&nbsp;address&nbsp;of&nbsp;element&nbsp;A[i]&nbsp;&nbsp;=&nbsp;base&nbsp;address&nbsp;+&nbsp;size&nbsp;*&nbsp;(&nbsp;i&nbsp;-&nbsp;first&nbsp;index)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="java" style="display: none;">Byte address of element A[i]  = base address + size * ( i - first index)   
+</textarea></div>
+<p>Here, size represents the memory taken by the primitive data types. As an instance, <strong>int</strong> takes 2 bytes, <strong>float</strong> takes 4 bytes of memory space in C programming.</p>
+<p>We can understand it with the help of an example -</p>
+<p>Suppose an array, A[-10 ..... +2 ] having Base address (BA) = 999 and size of an element = 2 bytes, find the location of A[-1].</p>
+<p>L(A[-1]) = 999 + 2 x [(-1) - (-10)]</p>
+<p>= 999 + 18</p>
+<p>= 1017</p>
+<h2 class="h2">Basic operations</h2>
+<p>Now, let's discuss the basic operations supported in the array -</p>
+<ul class="points">
+<li>Traversal - This operation is used to print the elements of the array.</li>
+<li>Insertion - It is used to add an element at a particular index.</li>
+<li>Deletion - It is used to delete an element from a particular index.</li>
+<li>Search - It is used to search an element using the given index or by the value.</li>
+<li>Update - It updates an element at a particular index.</li>
+</ul>
+<h3 class="h3">Traversal operation</h3>
+<p>This operation is performed to traverse through the array elements. It prints all array elements one after another. We can understand it with the below program -</p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">void</span><span>&nbsp;main()&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;Arr[5]&nbsp;=&nbsp;{18,&nbsp;30,&nbsp;15,&nbsp;70,&nbsp;12};&nbsp;&nbsp;</span></span></li><li class=""><span><span class="datatypes">int</span><span>&nbsp;i;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;printf(<span class="string">"Elements&nbsp;of&nbsp;the&nbsp;array&nbsp;are:\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>(i&nbsp;=&nbsp;0;&nbsp;i&lt;5;&nbsp;i++)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Arr[%d]&nbsp;=&nbsp;%d,&nbsp;&nbsp;"</span><span>,&nbsp;i,&nbsp;Arr[i]);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;stdio.h&gt;
+void main() {
+   int Arr[5] = {18, 30, 15, 70, 12};
+int i;
+   printf("Elements of the array are:\n");
+   for(i = 0; i&lt;5; i++) {
+      printf("Arr[%d] = %d,  ", i, Arr[i]);
+   }
+}
+</textarea></div>
+<p><strong>Output</strong></p>
+<img src="./Array (Data Structures) - javatpoint_files/ds-array3.png" alt="Array in DS">
+<h3 class="h3">Insertion operation</h3>
+<p>This operation is performed to insert one or more elements into the array. As per the requirements, an element can be added at the beginning, end, or at any index of the array. Now, let's see the implementation of inserting an element into the array.</p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="datatypes">int</span><span>&nbsp;main()&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;arr[20]&nbsp;=&nbsp;{&nbsp;18,&nbsp;30,&nbsp;15,&nbsp;70,&nbsp;12&nbsp;};&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;i,&nbsp;x,&nbsp;pos,&nbsp;n&nbsp;=&nbsp;5;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Array&nbsp;elements&nbsp;before&nbsp;insertion\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>&nbsp;(i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;n;&nbsp;i++)&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"%d&nbsp;"</span><span>,&nbsp;arr[i]);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;50;&nbsp;<span class="comment">//&nbsp;element&nbsp;to&nbsp;be&nbsp;inserted</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;pos&nbsp;=&nbsp;4;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;n++;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>&nbsp;(i&nbsp;=&nbsp;n-1;&nbsp;i&nbsp;&gt;=&nbsp;pos;&nbsp;i--)&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr[i]&nbsp;=&nbsp;arr[i&nbsp;-&nbsp;1];&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;arr[pos&nbsp;-&nbsp;1]&nbsp;=&nbsp;x;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"Array&nbsp;elements&nbsp;after&nbsp;insertion\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>&nbsp;(i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;n;&nbsp;i++)&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"%d&nbsp;"</span><span>,&nbsp;arr[i]);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;0;&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;stdio.h&gt;
+int main()
+{
+	int arr[20] = { 18, 30, 15, 70, 12 };
+	int i, x, pos, n = 5;
+    printf("Array elements before insertion\n");
+	for (i = 0; i &lt; n; i++)
+		printf("%d ", arr[i]);
+	printf("\n");
+
+	x = 50; // element to be inserted
+	pos = 4;
+	n++;
+
+	for (i = n-1; i &gt;= pos; i--)
+		arr[i] = arr[i - 1];
+	arr[pos - 1] = x;
+	printf("Array elements after insertion\n");
+	for (i = 0; i &lt; n; i++)
+		printf("%d ", arr[i]);
+	printf("\n");
+	return 0;
+}
+</textarea></div>
+<p><strong>Output</strong></p>
+<img src="./Array (Data Structures) - javatpoint_files/ds-array4.png" alt="Array in DS">
+<h3 class="h3">Deletion operation</h3>
+<p>As the name implies, this operation removes an element from the array and then reorganizes all of the array elements.</p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">void</span><span>&nbsp;main()&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;arr[]&nbsp;=&nbsp;{18,&nbsp;30,&nbsp;15,&nbsp;70,&nbsp;12};&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;k&nbsp;=&nbsp;30,&nbsp;n&nbsp;=&nbsp;5;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;i,&nbsp;j;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;printf(<span class="string">"Given&nbsp;array&nbsp;elements&nbsp;are&nbsp;:\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>(i&nbsp;=&nbsp;0;&nbsp;i&lt;n;&nbsp;i++)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"arr[%d]&nbsp;=&nbsp;%d,&nbsp;&nbsp;"</span><span>,&nbsp;i,&nbsp;arr[i]);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;j&nbsp;=&nbsp;k;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">while</span><span>(&nbsp;j&nbsp;&lt;&nbsp;n)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr[j-1]&nbsp;=&nbsp;arr[j];&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j&nbsp;=&nbsp;j&nbsp;+&nbsp;1;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;n&nbsp;=&nbsp;n&nbsp;-1;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;printf(<span class="string">"\nElements&nbsp;of&nbsp;array&nbsp;after&nbsp;deletion:\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>(i&nbsp;=&nbsp;0;&nbsp;i&lt;n;&nbsp;i++)&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"arr[%d]&nbsp;=&nbsp;%d,&nbsp;&nbsp;"</span><span>,&nbsp;i,&nbsp;arr[i]);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;stdio.h&gt;
+
+void main() {
+   int arr[] = {18, 30, 15, 70, 12};
+   int k = 30, n = 5;
+   int i, j;
+   
+   printf("Given array elements are :\n");
+	
+   for(i = 0; i&lt;n; i++) {
+      printf("arr[%d] = %d,  ", i, arr[i]);
+   }
+    
+   j = k;
+	
+   while( j &lt; n) {
+      arr[j-1] = arr[j];
+      j = j + 1;
+   }
+	
+   n = n -1;
+   
+   printf("\nElements of array after deletion:\n");
+	
+   for(i = 0; i&lt;n; i++) {
+      printf("arr[%d] = %d,  ", i, arr[i]);
+   }
+}
+</textarea></div>
+<p><strong>Output</strong></p>
+<img src="./Array (Data Structures) - javatpoint_files/ds-array5.png" alt="Array in DS">
+<h3 class="h3">Search operation</h3>
+<p>This operation is performed to search an element in the array based on the value or index.</p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">void</span><span>&nbsp;main()&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;arr[5]&nbsp;=&nbsp;{18,&nbsp;30,&nbsp;15,&nbsp;70,&nbsp;12};&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;item&nbsp;=&nbsp;70,&nbsp;i,&nbsp;j=0&nbsp;;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;printf(<span class="string">"Given&nbsp;array&nbsp;elements&nbsp;are&nbsp;:\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>(i&nbsp;=&nbsp;0;&nbsp;i&lt;5;&nbsp;i++)&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"arr[%d]&nbsp;=&nbsp;%d,&nbsp;&nbsp;"</span><span>,&nbsp;i,&nbsp;arr[i]);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"\nElement&nbsp;to&nbsp;be&nbsp;searched&nbsp;=&nbsp;%d"</span><span>,&nbsp;item);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">while</span><span>(&nbsp;j&nbsp;&lt;&nbsp;5){&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>(&nbsp;arr[j]&nbsp;==&nbsp;item&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">break</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j&nbsp;=&nbsp;j&nbsp;+&nbsp;1;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;printf(<span class="string">"\nElement&nbsp;%d&nbsp;is&nbsp;found&nbsp;at&nbsp;%d&nbsp;position"</span><span>,&nbsp;item,&nbsp;j+1);&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;stdio.h&gt;
+
+void main() {
+   int arr[5] = {18, 30, 15, 70, 12};
+   int item = 70, i, j=0 ;
+   
+   printf("Given array elements are :\n");
+	
+   for(i = 0; i&lt;5; i++) {
+      printf("arr[%d] = %d,  ", i, arr[i]);
+   }
+    printf("\nElement to be searched = %d", item);
+   while( j &lt; 5){
+      if( arr[j] == item ) {
+         break;
+      }
+		
+      j = j + 1;
+   }
+	
+   printf("\nElement %d is found at %d position", item, j+1);
+}
+</textarea></div>
+<p><strong>Output</strong></p>
+<img src="./Array (Data Structures) - javatpoint_files/ds-array6.png" alt="Array in DS">
+<h3 class="h3">Update operation</h3>
+<p>This operation is performed to update an existing array element located at the given index.</p>
+<div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;"></a><a href="https://www.javatpoint.com/data-structure-array#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">void</span><span>&nbsp;main()&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;arr[5]&nbsp;=&nbsp;{18,&nbsp;30,&nbsp;15,&nbsp;70,&nbsp;12};&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;item&nbsp;=&nbsp;50,&nbsp;i,&nbsp;pos&nbsp;=&nbsp;3;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;printf(<span class="string">"Given&nbsp;array&nbsp;elements&nbsp;are&nbsp;:\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>(i&nbsp;=&nbsp;0;&nbsp;i&lt;5;&nbsp;i++)&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"arr[%d]&nbsp;=&nbsp;%d,&nbsp;&nbsp;"</span><span>,&nbsp;i,&nbsp;arr[i]);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>arr[pos-1]&nbsp;=&nbsp;item;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;printf(<span class="string">"\nArray&nbsp;elements&nbsp;after&nbsp;updation&nbsp;:\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>(i&nbsp;=&nbsp;0;&nbsp;i&lt;5;&nbsp;i++)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">"arr[%d]&nbsp;=&nbsp;%d,&nbsp;&nbsp;"</span><span>,&nbsp;i,&nbsp;arr[i]);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include &lt;stdio.h&gt;
+
+void main() {
+   int arr[5] = {18, 30, 15, 70, 12};
+   int item = 50, i, pos = 3;
+   
+   printf("Given array elements are :\n");
+	
+   for(i = 0; i&lt;5; i++) {
+      printf("arr[%d] = %d,  ", i, arr[i]);
+   }
+    
+arr[pos-1] = item;	
+   printf("\nArray elements after updation :\n");
+	
+   for(i = 0; i&lt;5; i++) {
+      printf("arr[%d] = %d,  ", i, arr[i]);
+   }
+}
+</textarea></div>
+<p><strong>Output</strong></p>
+<img src="./Array (Data Structures) - javatpoint_files/ds-array7.png" alt="Array in DS">
+<h2 class="h2">Complexity of Array operations</h2>
+<p>Time and space complexity of various array operations are described in the following table.</p>
+<p><strong>Time Complexity</strong></p>
+<table class="alt">
+<tbody><tr>
+<th>Operation</th>
+<th>Average Case</th>
+<th>Worst Case</th>
+</tr>
+<tr>
+<td>Access</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Insertion</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Deletion</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+</tbody></table>
+<p><strong>Space Complexity</strong></p>
+<p>In array, space complexity for worst case is <strong>O(n)</strong>.</p>
+<h2 class="h2">Advantages of Array</h2>
+<ul class="points">
+<li>Array provides the single name for the group of variables of the same type. Therefore, it is easy to remember the name of all the elements of an array.</li>
+<li>Traversing an array is a very simple process; we just need to increment the base address of the array in order to visit each element one by one.</li>
+<li>Any element in the array can be directly accessed by using the index.</li>
+</ul>
+<h2 class="h2">Disadvantages of Array</h2>
+<ul class="points">
+<li>Array is homogenous. It means that the elements with similar data type can be stored in it.</li>
+<li>In array, there is static memory allocation that is size of an array cannot be altered.</li>
+<li>There will be wastage of memory if we store less number of elements than the declared size.</li>
+</ul>
+<h2 class="h2">Conclusion</h2>
+<p>In this article, we have discussed the special data structure, i.e., array, and the basic operations performed on it. Arrays provide a unique way to structure the stored data such that it can be easily accessed and can be queried to fetch the value using the index.</p>
+<hr>
+<div class="nexttopicdiv">
+<span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="https://www.javatpoint.com/data-structure-2d-array">2D Array</a></span>
+</div>
+<br><br>
+<div id="bottomnext">
+<a style="float:left" class="next" href="https://www.javatpoint.com/data-structure-structure">&#8592; prev</a>
+<a style="float:right" class="next" href="https://www.javatpoint.com/data-structure-2d-array">next &#8594;</a>
+</div>
+<br><br>
+</td></tr></tbody></table>
+</div>
+
+<div align="center" data-freestar-ad="__336x280 __790x250" id="javatpointcom_leaderboard_btf_1">
+<script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "javatpointcom_leaderboard_btf_1", slotId: "javatpointcom_leaderboard_btf_1" });
+  </script>
+</div>
+<hr class="hrhomebox">
+<div><img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube">
+<span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span>
+</div>
+<hr class="hrhomebox">
+<h3 class="h3">Feedback</h3>
+<ul class="points">
+<li>Send your Feedback to feedback@javatpoint.com</li>
+</ul>
+<hr class="hrhomebox">
+<h2 class="h2">Help Others, Please Share</h2>
+<a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/data-structure-array"><img src="./Array (Data Structures) - javatpoint_files/facebook32.png" alt="facebook"></a>
+<a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/data-structure-array"><img src="./Array (Data Structures) - javatpoint_files/twitter32.png" alt="twitter"></a>
+<a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/data-structure-array"><img src="./Array (Data Structures) - javatpoint_files/pinterest32.png" alt="pinterest"></a>
+
+<hr class="hrhomebox">
+
+<fieldset class="gra1">
+<h2 class="h3">Learn Latest Tutorials</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/splunk">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial">
+<p>Splunk</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/spss">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial">
+<p>SPSS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/swagger">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial">
+<p>Swagger</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/t-sql">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial">
+<p>Transact-SQL</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/tumblr">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial">
+<p>Tumblr</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reactjs-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial">
+<p>ReactJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/regex">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial">
+<p>Regex</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reinforcement-learning">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial">
+<p>Reinforcement Learning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/r-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial">
+<p>R Programming</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/rxjs">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial">
+<p>RxJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/react-native-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial">
+<p>React Native</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-design-pattern">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns">
+<p>Python Design Patterns</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-pillow">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial">
+<p>Python Pillow</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-turtle-programming">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial">
+<p>Python Turtle</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/keras">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial">
+<p>Keras</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox">
+
+<fieldset class="gra1">
+<h2 class="h3">Preparation</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/aptitude/quantitative">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude">
+<p>Aptitude</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reasoning">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning">
+<p>Reasoning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/verbal-ability">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability">
+<p>Verbal Ability</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/interview-questions-and-answers">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions">
+<p>Interview Questions</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions">
+<p>Company Questions</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox">
+
+<div align="center" data-freestar-ad="__336x280 __790x250" id="javatpointcom_leaderboard_btf_2">
+<script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "javatpointcom_leaderboard_btf_2", slotId: "javatpointcom_leaderboard_btf_2" });
+  </script>
+</div>
+
+<fieldset class="gra1">
+<h2 class="h3">Trending Technologies</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/artificial-intelligence-ai">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence">
+<p>Artificial Intelligence</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/aws-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial">
+<p>AWS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/selenium-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial">
+<p>Selenium</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cloud-computing">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing">
+<p>Cloud Computing</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/hadoop-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial">
+<p>Hadoop</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reactjs-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial">
+<p>ReactJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-science">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial">
+<p>Data Science</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/angular-7-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial">
+<p>Angular 7</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/blockchain-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial">
+<p>Blockchain</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/git">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial">
+<p>Git</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/machine-learning">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial">
+<p>Machine Learning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/devops">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial">
+<p>DevOps</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox">
+
+<fieldset class="gra1">
+<h2 class="h3">B.Tech / MCA</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/dbms-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial">
+<p>DBMS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-structure-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial">
+<p>Data Structures</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/daa-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial">
+<p>DAA</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/operating-system">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System">
+<p>Operating System</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-network-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial">
+<p>Computer Network</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/compiler-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial">
+<p>Compiler Design</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture">
+<p>Computer Organization</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/discrete-mathematics-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial">
+<p>Discrete Mathematics</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/ethical-hacking">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking">
+<p>Ethical Hacking</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-graphics-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial">
+<p>Computer Graphics</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/software-engineering">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering ">
+<p>Software Engineering</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/html-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial">
+<p>Web Technology</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cyber-security-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial">
+<p>Cyber Security</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/automata-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial">
+<p>Automata</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/c-programming-language-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial">
+<p>C Programming</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cpp-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial">
+<p>C++</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/java-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial">
+<p>Java</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/net-framework">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial">
+<p>.Net</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial">
+<p>Python</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/programs-list">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs">
+<p>Programs</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/control-system-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial">
+<p>Control System</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-mining">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial">
+<p>Data Mining</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-warehouse">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial">
+<p>Data Warehouse</p>
+</div>
+</a>
+</div>
+</fieldset>
+
+<div align="center" data-freestar-ad="__336x280 __790x250" id="javatpointcom_leaderboard_btf_3">
+<script data-cfasync="false" type="text/javascript">
+    freestar.config.enabled_slots.push({ placementName: "javatpointcom_leaderboard_btf_3", slotId: "javatpointcom_leaderboard_btf_3" });
+  </script>
+</div>
+</div>
+<br><br><div class="mobilemenu" style="clear:both">
+</div></div>
+<div id="right" style="height: 12334px; position:static;">
+<div class="sidebar-container">
+<div class="sticky-container">
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_1">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+              placementName: "javatpointcom_rightrail_1",
+              slotId: "javatpointcom_rightrail_1"
+          });
+      </script>
+</div>
+<br>
+<br>
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_2">
+<script data-cfasync="false" type="text/javascript">
+        freestar.config.enabled_slots.push({
+            placementName: "javatpointcom_rightrail_2",
+            slotId: "javatpointcom_rightrail_2"
+        });
+    </script>
+</div>
+<br>
+<br>
+</div>
+</div>
+<div class="sidebar-container">
+<div class="sticky-container">
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_3">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+              placementName: "javatpointcom_rightrail_3",
+              slotId: "javatpointcom_rightrail_3"
+          });
+      </script>
+</div>
+<br>
+<br>
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_4">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+              placementName: "javatpointcom_rightrail_4",
+              slotId: "javatpointcom_rightrail_4"
+          });
+      </script>
+</div>
+<br>
+<br>
+</div>
+</div>
+<div class="sidebar-container">
+<div class="sticky-container">
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_5">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+              placementName: "javatpointcom_rightrail_5",
+              slotId: "javatpointcom_rightrail_5"
+          });
+      </script>
+</div>
+<br>
+<br>
+<div align="center" data-freestar-ad="__336x280" id="javatpointcom_rightrail_6">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+              placementName: "javatpointcom_rightrail_6",
+              slotId: "javatpointcom_rightrail_6"
+          });
+      </script>
+</div>
+</div>
+</div>
+<br><br>
+</div>
+<div class="right1024" style="float:left;margin-left:10px;margin-top:120px;">
+
+</div>
+<br>
+<div id="footer" style="clear:both;width:100%">
+<div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on hr@javatpoint.com, to get more information about given services. </p><ul class="points"> <li>Website Designing</li><li>Website Development</li><li>Java Development</li><li>PHP Development</li><li>WordPress</li><li>Graphic Designing</li><li>Logo</li><li>Digital Marketing</li><li>On Page and Off Page SEO</li><li>PPC</li><li>Content Development</li><li>Corporate Training</li><li>Classroom and Online Training</li><li>Data Entry</li></ul> <p style="padding-bottom:60px"></p></div><div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at hr@javatpoint.com. <br>Duration: 1 week to 2 week<br></p></div><script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script><div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="./Array (Data Structures) - javatpoint_files/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="./Array (Data Structures) - javatpoint_files/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="./Array (Data Structures) - javatpoint_files/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="./Array (Data Structures) - javatpoint_files/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="./Array (Data Structures) - javatpoint_files/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com/"><img src="./Array (Data Structures) - javatpoint_files/blog.png" alt="Blog Page"></a> </div><footer class="footer1"><div class="column4"><h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a></div><div class="column4"><h3>Our Websites</h3><a href="https://www.javatpoint.com/">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com/">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com/">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com/">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com/">Jobandplacement.com</a></div><div class="column4"><h3>Our Services</h3><p>Website Development</p><p>Android Development</p><p>Website Designing</p><p>Digital Marketing</p><p>Summer Training</p><p>Industrial Training</p><p>College Campus Training</p></div><div class="column4"><h3>Contact</h3><p>Address: G-13, 2nd Floor, Sec-3</p><p>Noida, UP, 201301, India</p><p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a><br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a></div></footer><footer class="footer2"><p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p></footer>
+<div id="bot-root"><script src="https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0"></script></div>
+<script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script>
+</div>
+
+</div></div>
+<script src="./Array (Data Structures) - javatpoint_files/shcoreandbrush.js.download"></script><script type="text/javascript" src="./Array (Data Structures) - javatpoint_files/google.js.download"></script>
+<script> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+<script src="./Array (Data Structures) - javatpoint_files/lazysizes.min.js.download" async=""></script>
+  <div id="sonic-chromane-btn-widget" class=""><div class="sonic-chromane-btn-widget-img"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                    <path d="M0 14.7704C0 15.2331 0.183893 15.6765 0.510154 16.0042L7.33791 22.832C7.66566 23.1597 8.10908 23.3421 8.57177 23.3421H16.7446C20.0206 23.3421 22.6752 20.6876 22.6752 17.4116V6.59753C22.6752 3.32157 20.0206 0.666992 16.7446 0.666992H5.93054C2.65458 0.666992 0 3.32157 0 6.59753V14.7704H0Z" fill="url(#paint0_linear_11785_218544)"></path>
+                    <path d="M16.2212 22.4702C19.3044 22.4702 21.8032 19.9713 21.8032 16.8882V7.1211C21.8032 4.03793 19.3044 1.53906 16.2212 1.53906H6.45264C3.36947 1.53906 0.870605 4.03793 0.870605 7.1211V14.3448C0.870605 15.116 1.49495 15.7403 2.26611 15.7403H3.76395C5.88316 15.7403 7.60049 17.4576 7.60049 19.5783V21.0762C7.60049 21.8473 8.22483 22.4717 8.99599 22.4717H16.2197L16.2212 22.4702Z" fill="url(#paint1_linear_11785_218544)"></path>
+                    <path d="M8.3864 15.4744C7.37796 15.4744 6.5801 15.1466 5.99135 14.4912C5.4026 13.8357 5.17421 12.9844 5.30768 11.9404C5.44115 10.9082 5.89051 10.0792 6.65574 9.45339C7.4091 8.83349 8.27666 8.52355 9.26138 8.52355C10.47 8.52355 11.3865 8.98773 12.0124 9.91757L10.8912 10.883C10.4596 10.269 9.88869 9.96354 9.17833 9.96354C8.60144 9.96354 8.09722 10.1489 7.66566 10.5197C7.23411 10.8904 6.97607 11.3724 6.89153 11.9686C6.81294 12.5573 6.93454 13.0467 7.25635 13.4353C7.5841 13.8119 8.03345 14.0003 8.60441 14.0003C9.32663 14.0003 9.99843 13.6844 10.6168 13.0526L11.5274 14.0641C11.1389 14.4956 10.6702 14.8382 10.12 15.0933C9.56984 15.3483 8.99147 15.4759 8.38492 15.4759L8.3864 15.4744ZM14.2517 15.4922C13.7119 15.4922 13.2299 15.375 12.8072 15.1422C12.3846 14.9079 12.0583 14.5668 11.8285 14.1174L12.9303 13.1698C13.0757 13.4427 13.2774 13.6622 13.5354 13.8253C13.7934 13.9899 14.0678 14.0715 14.36 14.0715C14.6032 14.0715 14.8078 14.0136 14.9754 13.898C15.143 13.7823 15.2409 13.634 15.272 13.4516C15.2957 13.2143 15.1474 13.0022 14.8256 12.8139L14.2339 12.5128C13.9358 12.3616 13.7 12.2281 13.5235 12.1124C12.8799 11.6868 12.613 11.1099 12.7227 10.3818C12.8013 9.81673 13.0742 9.36441 13.5428 9.0248C14.01 8.68519 14.5869 8.51465 15.2735 8.51465C16.1173 8.51465 16.8277 8.8157 17.4046 9.41632L16.4569 10.4915C16.0313 10.1089 15.5923 9.91757 15.1356 9.91757C14.8983 9.91757 14.7055 9.96948 14.5572 10.0718C14.4089 10.1756 14.3244 10.3091 14.3066 10.4722C14.2828 10.6116 14.314 10.7288 14.403 10.8222C14.4905 10.9156 14.6566 11.0269 14.8998 11.1544C15.6042 11.5192 16.0387 11.755 16.2018 11.8648C16.8158 12.2963 17.0635 12.8569 16.9493 13.5495C16.8588 14.156 16.5578 14.6335 16.0476 14.9791C15.5434 15.3187 14.9457 15.4892 14.2532 15.4892L14.2517 15.4922Z" fill="#F4F4F6"></path>
+                    <defs>
+                    <lineargradient id="paint0_linear_11785_218544" x1="20.5989" y1="21.9199" x2="1.7366" y2="2.40359" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white"></stop>
+                    <stop offset="0.270588" stop-color="#C940FF"></stop>
+                    <stop offset="0.478431" stop-color="#931FFF"></stop>
+                    <stop offset="0.709804" stop-color="#1B6BFF"></stop>
+                    <stop offset="1" stop-color="#EF96FF"></stop>
+                    </lineargradient>
+                    <lineargradient id="paint1_linear_11785_218544" x1="5.31814" y1="18.2629" x2="22.5388" y2="0.508371" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#5105CD"></stop>
+                    <stop offset="1" stop-color="#5105CD" stop-opacity="0"></stop>
+                    </lineargradient>
+                    </defs>
+                </svg></div><div class="sonic-chromane-btn-widget-text">&#8984;+M</div><div class="sonic-chromane-btn-widget-close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <g>
+                <path d="M18 6L6 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M18 18L6 6" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                <clippath>
+                <rect width="24" height="24" fill="none"></rect>
+                </clippath>
+                </defs>
+            </svg></div></div><webchatgpt-custom-element-ba5d4bbc-d146-49af-9c3e-fa7cb1f2c3ea id="webchatgpt-snackbar" style="z-index: 2147483647;"><template shadowrootmode="open"><style></style><div id="webchatgpt-snackbar-inner" style="color: rgb(255, 255, 255);"></div></template></webchatgpt-custom-element-ba5d4bbc-d146-49af-9c3e-fa7cb1f2c3ea></body></html>
